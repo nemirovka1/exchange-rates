@@ -36,9 +36,9 @@ This repository contains a React-based Currency Exchange application with severa
 - **Zustand:** A state management library for React applications.
 - **SWR:** Stale-While-Revalidate library for efficient data fetching.
 - **Unit Tests:** Jest, Karma, Mocha, React Testing Library.
-- **UI Framework:** (Feel free to choose any based on preference).
+- **UI Framework:** Material UI.
 
-### Nice-to-Have Features:
+### Features:
 
 - **Fancy UI:**
   - Utilizes a UI framework for a visually appealing and responsive design.

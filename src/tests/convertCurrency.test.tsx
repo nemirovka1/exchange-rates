@@ -83,7 +83,7 @@ describe('CurrencyConverter component', () => {
 
         await waitFor(() => {
             const resultElement = getByLabelText('Get') as HTMLInputElement;
-            expect(resultElement.value).toBe('4000.67');
+            expect(resultElement.value).toBe('2.5');
         });
     });
 });

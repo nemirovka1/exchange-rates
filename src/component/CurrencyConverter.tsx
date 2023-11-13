@@ -8,10 +8,10 @@ import {inputValidations} from "../helpers/helpers";
 export const CurrencyConverter = () => {
     const classes = useStyles()
     const { currencyData } = useCurrencyStore()
-    const [inputValue, setInputValue] = useState<number>()
+    const [inputValue, setInputValue] = useState<number>(0)
     const [selectedFromCurrency, setSelectedFromCurrency] = useState('UAH')
     const [selectedToCurrency, setSelectedToCurrency] = useState('CHF')
-    const [conversionResult, setConversionResult] = useState<number>()
+    const [conversionResult, setConversionResult] = useState<number>(0)
     const [swag, setSwag] = useState(false)
 
     const handleConversion = useCallback(() => {
@@ -20,7 +20,7 @@ export const CurrencyConverter = () => {
         const value = currencyData.find(el => el.ccy === selectedFromCurrency || el.ccy === selectedToCurrency);
         if (value && inputValue) {
             const rate = swag ? value.sale : value.buy;
-            const result = (inputValue * rate).toFixed(2);
+            const result = (inputValue / rate).toFixed(2);
             setConversionResult(parseFloat(result));
         }
     }, [selectedFromCurrency, selectedToCurrency, inputValue, swag, currencyData]);
